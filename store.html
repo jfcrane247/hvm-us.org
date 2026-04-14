@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store | Hope In The Valley Ministry</title>
+  <meta name="description" content="Shop the Hope In The Valley Ministry store. Every purchase supports our suicide prevention, grief support, and community outreach programs." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/HVM-logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <div class="crisis-banner" role="alert">
+    If you or someone you know is in crisis, call or text <a href="tel:988"><strong>988</strong></a> — Suicide &amp; Crisis Lifeline, available 24/7.
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="Hope In The Valley Ministry home">
+          <div class="nav-logo-icon" aria-hidden="true"><img src="images/HVM-logo.svg" alt="HVM circular logo" width="40" height="40"></div>
+          <div class="nav-logo-text">
+            <div class="nav-logo-name">Hope In The Valley</div>
+            <div class="nav-logo-tagline">Ministry</div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Resources</a></li>
+          <li><a href="donate.html" class="donate-link">❤ Donate</a></li>
+        </ul>
+        <button class="nav-cart" id="cartBtn" aria-label="Open shopping cart">
+          🛒 Cart <span class="cart-count" style="display:none">0</span>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Store Hero -->
+  <section class="store-hero" aria-labelledby="storeTitle">
+    <div class="container">
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> / Store
+      </nav>
+      <img src="images/HVM-logo2.svg"
+           alt="Hope In The Valley Ministry"
+           class="page-hero-banner"
+           width="260" height="143">
+      <span class="section-tag">Ministry Store</span>
+      <h1 class="section-title" id="storeTitle">Shop &amp; Spread Hope</h1>
+      <p class="section-sub">Every purchase supports our programs and helps spread the message of hope. Wear it. Share it. Live it.</p>
+    </div>
+  </section>
+
+  <!-- Store Section -->
+  <section class="section" aria-labelledby="productsTitle">
+    <div class="container">
+      <h2 class="sr-only" id="productsTitle">Products</h2>
+
+      <!-- Filter Buttons -->
+      <div class="store-filters" role="group" aria-label="Filter products by category">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="apparel">Apparel</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+        <button class="filter-btn" data-filter="resources">Resources</button>
+        <button class="filter-btn" data-filter="awareness">Awareness</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="cards-grid cards-grid-4" id="productsGrid">
+
+        <!-- T-Shirt -->
+        <article class="product-card" data-category="apparel">
+          <div class="product-img" style="background:linear-gradient(135deg,#1a3a5c,#2e7d57);">
+            <span role="img" aria-label="T-shirt">👕</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Hope In The Valley T-Shirt</h3>
+            <p class="product-desc">Classic unisex cotton tee featuring our ministry logo and "Hope In The Valley" text. Available in S–3XL.</p>
+            <div class="product-footer">
+              <span class="product-price">$25.00</span>
+              <button class="add-to-cart"
+                data-id="tshirt-01"
+                data-name="Hope In The Valley T-Shirt"
+                data-price="25"
+                data-icon="👕">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Hoodie -->
+        <article class="product-card" data-category="apparel">
+          <div class="product-img" style="background:linear-gradient(135deg,#0f2440,#1a3a5c);">
+            <span role="img" aria-label="Hoodie">🧥</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">HVM Pullover Hoodie</h3>
+            <p class="product-desc">Warm and comfortable pullover hoodie with front logo and "hvm-us.org" on the sleeve. Available S–3XL.</p>
+            <div class="product-footer">
+              <span class="product-price">$45.00</span>
+              <button class="add-to-cart"
+                data-id="hoodie-01"
+                data-name="HVM Pullover Hoodie"
+                data-price="45"
+                data-icon="🧥">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Wristband -->
+        <article class="product-card" data-category="awareness">
+          <div class="product-img" style="background:linear-gradient(135deg,#c9a227,#e4bc50);">
+            <span role="img" aria-label="Wristband">🟡</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Hope Awareness Wristband</h3>
+            <p class="product-desc">Silicone wristband in teal or gold. Stamped with "Hope In The Valley · 988". Pack of 5.</p>
+            <div class="product-footer">
+              <span class="product-price">$10.00</span>
+              <button class="add-to-cart"
+                data-id="wristband-01"
+                data-name="Hope Awareness Wristband (5-pack)"
+                data-price="10"
+                data-icon="🟡">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Devotional Book -->
+        <article class="product-card" data-category="resources">
+          <div class="product-img" style="background:linear-gradient(135deg,#2e7d57,#3a9e6e);">
+            <span role="img" aria-label="Book">📖</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Hope In The Valley Devotional</h3>
+            <p class="product-desc">A 30-day devotional for those walking through grief, despair, or supporting a loved one in crisis. Grounded in Scripture.</p>
+            <div class="product-footer">
+              <span class="product-price">$15.00</span>
+              <button class="add-to-cart"
+                data-id="devotional-01"
+                data-name="Hope In The Valley Devotional"
+                data-price="15"
+                data-icon="📖">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tote Bag -->
+        <article class="product-card" data-category="accessories">
+          <div class="product-img" style="background:linear-gradient(135deg,#e8e8e8,#f7f4ef);">
+            <span role="img" aria-label="Tote bag">👜</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Ministry Canvas Tote Bag</h3>
+            <p class="product-desc">Durable canvas tote with the HVM logo. Perfect for community events, church, or everyday use.</p>
+            <div class="product-footer">
+              <span class="product-price">$18.00</span>
+              <button class="add-to-cart"
+                data-id="tote-01"
+                data-name="Ministry Canvas Tote Bag"
+                data-price="18"
+                data-icon="👜">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mug -->
+        <article class="product-card" data-category="accessories">
+          <div class="product-img" style="background:linear-gradient(135deg,#c9a227,#1a3a5c);">
+            <span role="img" aria-label="Coffee mug">☕</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">"God of Hope" Coffee Mug</h3>
+            <p class="product-desc">11 oz ceramic mug featuring Romans 15:13. Start every morning with a reminder that hope is real.</p>
+            <div class="product-footer">
+              <span class="product-price">$16.00</span>
+              <button class="add-to-cart"
+                data-id="mug-01"
+                data-name='"God of Hope" Coffee Mug'
+                data-price="16"
+                data-icon="☕">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sticker Pack -->
+        <article class="product-card" data-category="awareness">
+          <div class="product-img" style="background:linear-gradient(135deg,#3a9e6e,#c9a227);">
+            <span role="img" aria-label="Sticker">🏷️</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Hope Sticker Pack</h3>
+            <p class="product-desc">Pack of 6 vinyl stickers with hope-themed designs and scripture references. Weatherproof and durable.</p>
+            <div class="product-footer">
+              <span class="product-price">$8.00</span>
+              <button class="add-to-cart"
+                data-id="stickers-01"
+                data-name="Hope Sticker Pack (6-pack)"
+                data-price="8"
+                data-icon="🏷️">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Resource Kit -->
+        <article class="product-card" data-category="resources">
+          <div class="product-img" style="background:linear-gradient(135deg,#1a3a5c,#c9a227);">
+            <span role="img" aria-label="Resource kit">📦</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Church Resource Kit</h3>
+            <p class="product-desc">Complete set of printed prevention materials for churches: bulletin inserts, discussion guides, and leader training cards.</p>
+            <div class="product-footer">
+              <span class="product-price">$35.00</span>
+              <button class="add-to-cart"
+                data-id="kit-01"
+                data-name="Church Resource Kit"
+                data-price="35"
+                data-icon="📦">
+                + Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripture Banner -->
+  <div class="scripture-banner" role="complementary">
+    <div class="container">
+      <p class="scripture-text">"Carry each other's burdens, and in this way you will fulfill the law of Christ."</p>
+      <p class="scripture-ref">— Galatians 6:2</p>
+    </div>
+  </div>
+
+  <!-- Shipping & Info -->
+  <section class="section section-alt" aria-labelledby="shippingTitle">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-tag">Store Information</span>
+        <h2 class="section-title" id="shippingTitle">Ordering &amp; Shipping</h2>
+      </div>
+      <div class="cards-grid cards-grid-3">
+        <div class="card">
+          <div class="card-icon">🚚</div>
+          <h3 class="card-title">Free Shipping</h3>
+          <p class="card-text">Free standard shipping on all orders over $50 within the contiguous United States. Orders typically ship within 3–5 business days.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔁</div>
+          <h3 class="card-title">Easy Returns</h3>
+          <p class="card-text">Not happy with your purchase? Contact us within 30 days for a full refund or exchange. Apparel items must be unworn and unwashed.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">❤</div>
+          <h3 class="card-title">Every Purchase Matters</h3>
+          <p class="card-text">100% of net proceeds from the store go directly to funding our programs: prevention education, grief support, and community outreach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;" aria-labelledby="storeCta">
+    <div class="container">
+      <span class="section-tag">Direct Support</span>
+      <h2 class="section-title" id="storeCta" style="margin:0 auto 1rem;">Want to Give More?</h2>
+      <p class="section-sub" style="margin:0 auto 2rem;">A direct donation allows us to direct your gift exactly where it is needed most. Every dollar saves lives.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+        <a href="donate.html" class="btn btn-primary">❤ Donate Directly</a>
+        <a href="programs.html" class="btn btn-outline">Learn About Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon"><img src="images/HVM-logo.svg" alt="HVM circular logo" width="40" height="40"></div>
+            <div class="nav-logo-text">
+              <div class="nav-logo-name">Hope In The Valley</div>
+              <div class="nav-logo-tagline">Ministry</div>
+            </div>
+          </a>
+          <p>A non-denominational Christian outreach dedicated to Christ-centered suicide prevention, grief support, and community awareness.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Ministry</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Our Programs</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="store.html">Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Crisis Resources</a></li>
+            <li><a href="contact.html#grief">Grief Support</a></li>
+            <li><a href="contact.html#volunteer">Volunteer</a></li>
+            <li><a href="contact.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Crisis Help</h4>
+          <ul class="footer-links">
+            <li><a href="tel:988">📞 988 Lifeline</a></li>
+            <li><a href="sms:741741">💬 Crisis Text: 741741</a></li>
+            <li><a href="tel:911">🚨 Emergency: 911</a></li>
+            <li><a href="https://988lifeline.org" target="_blank" rel="noopener">988lifeline.org ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-crisis">
+      <div class="container">
+        If you are in crisis, please call or text <a href="tel:988">988</a> immediately. Help is available 24/7.
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2025 Hope In The Valley Ministry · hvm-us.org · Cleveland, Tennessee</span>
+        <span>Built with ❤ to bring hope to the valley</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModal" role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+        <button class="btn btn-green" id="cartCheckout" style="width:100%">Proceed to Checkout</button>
+        <p class="cart-notice">Proceeds support Hope In The Valley Ministry programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Store filter logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const products   = document.querySelectorAll('#productsGrid .product-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.dataset.filter;
+          products.forEach(p => {
+            p.style.display = (cat === 'all' || p.dataset.category === cat) ? '' : 'none';
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
