@@ -169,13 +169,22 @@ ul { list-style: none; }
 .nav-logo-icon {
   width: 44px;
   height: 44px;
-  background: var(--gold);
+  background: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
   flex-shrink: 0;
+  overflow: hidden;
+  padding: 2px;
+  border: 2px solid var(--gold);
+}
+.nav-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
 }
 .nav-logo-text { line-height: 1.2; }
 .nav-logo-name {
@@ -280,6 +289,23 @@ ul { list-style: none; }
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
+}
+
+/* ---------- Hero Banner Logo ---------- */
+.hero-banner-logo {
+  display: block;
+  max-width: 320px;
+  margin-bottom: 1.5rem;
+  /* Invert black marks → white so logo is visible on the dark hero */
+  filter: brightness(0) invert(1);
+}
+
+/* Banner logo in inner page heroes */
+.page-hero-banner {
+  display: block;
+  max-width: 240px;
+  margin-bottom: 1.25rem;
+  filter: brightness(0) invert(1);
 }
 
 .hero-eyebrow {
