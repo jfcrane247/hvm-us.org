@@ -66,12 +66,14 @@ const Cart = (function () {
   }
 
   function updateQty(id, qty) {
-    const items = load();
-    const item = items.find(i => i.id === id);
-    if (item) {
-      item.qty = Math.max(1, qty);
-      save(items);
+    let items = load();
+    if (qty <= 0) {
+      items = items.filter(i => i.id !== id);
+    } else {
+      const item = items.find(i => i.id === id);
+      if (item) item.qty = qty;
     }
+    save(items);
     updateCountBadge();
     return items;
   }
@@ -124,15 +126,38 @@ const Cart = (function () {
           <div class="cart-item-name">${item.name}</div>
           <div class="cart-item-price">$${item.price.toFixed(2)} each</div>
           <div class="cart-item-qty">
-            <button class="qty-btn" onclick="Cart.updateQty('${item.id}', ${item.qty - 1}); renderCartModal()">−</button>
+            <button class="qty-btn" data-action="decrement" data-id="${item.id}" aria-label="Decrease quantity">−</button>
             <span class="qty-num">${item.qty}</span>
-            <button class="qty-btn" onclick="Cart.updateQty('${item.id}', ${item.qty + 1}); renderCartModal()">+</button>
+            <button class="qty-btn" data-action="increment" data-id="${item.id}" aria-label="Increase quantity">+</button>
           </div>
         </div>
-        <button class="cart-item-remove" onclick="Cart.removeItem('${item.id}'); renderCartModal()">✕ Remove</button>
+        <button class="cart-item-remove" data-action="remove" data-id="${item.id}">✕ Remove</button>
       </div>
     `).join('');
     totalEl.textContent = '$' + Cart.total().toFixed(2);
+  }
+
+  function handleCartItemAction(e) {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) return;
+    const id     = btn.dataset.id;
+    const action = btn.dataset.action;
+    if (action === 'remove') {
+      Cart.removeItem(id);
+    } else if (action === 'decrement') {
+      const items   = Cart.getItems();
+      const current = items.find(i => i.id === id);
+      if (current && current.qty <= 1) {
+        Cart.removeItem(id);
+      } else {
+        Cart.updateQty(id, (current ? current.qty : 1) - 1);
+      }
+    } else if (action === 'increment') {
+      const items   = Cart.getItems();
+      const current = items.find(i => i.id === id);
+      Cart.updateQty(id, (current ? current.qty : 0) + 1);
+    }
+    renderCart();
   }
 
   window.renderCartModal = renderCart;
@@ -151,6 +176,7 @@ const Cart = (function () {
   if (cartBtn)   cartBtn.addEventListener('click', openCart);
   if (overlay)   overlay.addEventListener('click', closeCart);
   if (closeBtn)  closeBtn.addEventListener('click', closeCart);
+  if (itemsEl)   itemsEl.addEventListener('click', handleCartItemAction);
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (Cart.count() === 0) {
