@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Hope In The Valley Ministry</title>
+  <meta name="description" content="Support Hope In The Valley Ministry with a one-time or recurring donation. Your gift funds suicide prevention education, grief support, and community outreach." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝️</text></svg>" />
+</head>
+<body>
+
+  <div class="crisis-banner" role="alert">
+    If you or someone you know is in crisis, call or text <a href="tel:988"><strong>988</strong></a> — Suicide &amp; Crisis Lifeline, available 24/7.
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="Hope In The Valley Ministry home">
+          <div class="nav-logo-icon" aria-hidden="true">✝</div>
+          <div class="nav-logo-text">
+            <div class="nav-logo-name">Hope In The Valley</div>
+            <div class="nav-logo-tagline">Ministry</div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Resources</a></li>
+          <li><a href="donate.html" class="donate-link">❤ Donate</a></li>
+        </ul>
+        <a href="store.html" class="nav-cart" id="cartBtn" aria-label="Shopping cart">
+          🛒 Cart <span class="cart-count" style="display:none">0</span>
+        </a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Donate Hero -->
+  <section class="donate-hero" aria-labelledby="donateTitle">
+    <div class="container">
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> / Donate
+      </nav>
+      <span class="section-tag">Make a Difference</span>
+      <h1 class="section-title" id="donateTitle">Give Hope to the Valley</h1>
+      <p class="section-sub">Your generosity funds suicide prevention education, grief support groups, and community outreach programs that save lives. Every gift matters.</p>
+    </div>
+  </section>
+
+  <!-- Donation Form Section -->
+  <section class="section" aria-labelledby="donateFormTitle">
+    <div class="container">
+      <div class="donate-grid">
+        <!-- Donation Form -->
+        <div>
+          <div class="donate-form-card">
+            <h2 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem;" id="donateFormTitle">
+              ❤ Make a Secure Donation
+            </h2>
+
+            <!-- Frequency -->
+            <div class="form-group">
+              <label class="form-label">Donation Frequency</label>
+              <div style="display:flex;gap:.75rem;">
+                <label style="flex:1;display:flex;align-items:center;gap:.5rem;cursor:pointer;padding:.75rem;border:2px solid var(--gray-200);border-radius:var(--radius);font-weight:600;font-size:.9rem;" id="freqOnce">
+                  <input type="radio" name="frequency" value="once" checked style="accent-color:var(--green);"> One-Time
+                </label>
+                <label style="flex:1;display:flex;align-items:center;gap:.5rem;cursor:pointer;padding:.75rem;border:2px solid var(--gray-200);border-radius:var(--radius);font-weight:600;font-size:.9rem;" id="freqMonthly">
+                  <input type="radio" name="frequency" value="monthly" style="accent-color:var(--green);"> Monthly
+                </label>
+                <label style="flex:1;display:flex;align-items:center;gap:.5rem;cursor:pointer;padding:.75rem;border:2px solid var(--gray-200);border-radius:var(--radius);font-weight:600;font-size:.9rem;" id="freqAnnual">
+                  <input type="radio" name="frequency" value="annual" style="accent-color:var(--green);"> Annual
+                </label>
+              </div>
+            </div>
+
+            <!-- Amount Selector -->
+            <div class="form-group">
+              <label class="form-label">Select Amount</label>
+              <div class="amount-selector" role="group" aria-label="Donation amount options">
+                <button type="button" class="amount-btn" data-amount="25">$25</button>
+                <button type="button" class="amount-btn selected" data-amount="50">$50</button>
+                <button type="button" class="amount-btn" data-amount="100">$100</button>
+                <button type="button" class="amount-btn" data-amount="250">$250</button>
+                <button type="button" class="amount-btn" data-amount="500">$500</button>
+                <button type="button" class="amount-btn" data-amount="custom">Other</button>
+              </div>
+              <input type="hidden" id="donationAmount" value="50" />
+              <div id="customAmount" style="display:none;margin-top:.75rem;">
+                <label class="form-label" for="customAmountInput">Enter Custom Amount ($)</label>
+                <input type="number" id="customAmountInput" class="form-input" placeholder="e.g. 75" min="1" step="1" />
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <form id="donationForm" novalidate>
+              <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">Your Information</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="donorFirst">First Name <span aria-hidden="true" style="color:var(--red-crisis)">*</span></label>
+                  <input type="text" id="donorFirst" class="form-input" placeholder="John" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="donorLast">Last Name <span aria-hidden="true" style="color:var(--red-crisis)">*</span></label>
+                  <input type="text" id="donorLast" class="form-input" placeholder="Smith" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donorEmail">Email Address <span aria-hidden="true" style="color:var(--red-crisis)">*</span></label>
+                <input type="email" id="donorEmail" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donorDesignation">Designate My Gift (optional)</label>
+                <select id="donorDesignation" class="form-select">
+                  <option value="">— Where it's needed most —</option>
+                  <option value="prevention">Suicide Prevention Education</option>
+                  <option value="grief">Grief Support Programs</option>
+                  <option value="outreach">Community Outreach &amp; Awareness</option>
+                  <option value="youth">Youth Programs</option>
+                  <option value="general">General Operations</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="donorMessage">Message (optional)</label>
+                <textarea id="donorMessage" class="form-textarea" placeholder="Share why this ministry matters to you…" maxlength="500"></textarea>
+              </div>
+              <div class="form-group" style="display:flex;align-items:flex-start;gap:.5rem;">
+                <input type="checkbox" id="donorAnonymous" style="margin-top:.2rem;accent-color:var(--green);" />
+                <label for="donorAnonymous" style="font-size:.9rem;color:var(--gray-600);cursor:pointer;">I would like to give anonymously (name will not be shared publicly)</label>
+              </div>
+
+              <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;font-size:1rem;padding:1rem;">
+                🔒 Proceed to Secure Payment
+              </button>
+              <p style="font-size:.8rem;color:var(--gray-600);text-align:center;margin-top:.75rem;">
+                🔒 Secure, encrypted checkout · Hope In The Valley Ministry is a non-profit organization. Donations may be tax-deductible.
+              </p>
+            </form>
+          </div>
+
+          <!-- Alternative Methods -->
+          <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:1.75rem;margin-top:1.5rem;">
+            <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Other Ways to Give</h3>
+            <div style="display:flex;flex-direction:column;gap:.75rem;">
+              <div style="display:flex;gap:.75rem;align-items:center;font-size:.9rem;">
+                <span style="font-size:1.3rem;">✉️</span>
+                <div>
+                  <strong>Mail a Check</strong><br>
+                  <span style="color:var(--gray-600);">Payable to "Hope In The Valley Ministry" · P.O. Box [TBD], Cleveland, TN</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:.75rem;align-items:center;font-size:.9rem;">
+                <span style="font-size:1.3rem;">📱</span>
+                <div>
+                  <strong>Venmo / PayPal</strong><br>
+                  <span style="color:var(--gray-600);">Contact us at <a href="contact.html" style="color:var(--green)">info@hvm-us.org</a> for our handles</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:.75rem;align-items:center;font-size:.9rem;">
+                <span style="font-size:1.3rem;">🏢</span>
+                <div>
+                  <strong>Corporate Matching</strong><br>
+                  <span style="color:var(--gray-600);">Ask your employer if they match charitable donations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="donate-sidebar">
+          <!-- Your Impact -->
+          <div class="sidebar-card">
+            <h3>Your Impact</h3>
+            <ul class="impact-list">
+              <li class="impact-item">
+                <span class="impact-icon">🎓</span>
+                <div>
+                  <strong style="display:block;font-size:.95rem;color:var(--navy);">$25</strong>
+                  <span style="color:var(--gray-600);font-size:.875rem;">Provides prevention materials for one church leader</span>
+                </div>
+              </li>
+              <li class="impact-item">
+                <span class="impact-icon">💙</span>
+                <div>
+                  <strong style="display:block;font-size:.95rem;color:var(--navy);">$50</strong>
+                  <span style="color:var(--gray-600);font-size:.875rem;">Supports one month of grief support group resources</span>
+                </div>
+              </li>
+              <li class="impact-item">
+                <span class="impact-icon">📢</span>
+                <div>
+                  <strong style="display:block;font-size:.95rem;color:var(--navy);">$100</strong>
+                  <span style="color:var(--gray-600);font-size:.875rem;">Funds a community awareness event or workshop</span>
+                </div>
+              </li>
+              <li class="impact-item">
+                <span class="impact-icon">🏫</span>
+                <div>
+                  <strong style="display:block;font-size:.95rem;color:var(--navy);">$250</strong>
+                  <span style="color:var(--gray-600);font-size:.875rem;">Brings a school prevention program to 50+ students</span>
+                </div>
+              </li>
+              <li class="impact-item">
+                <span class="impact-icon">🌟</span>
+                <div>
+                  <strong style="display:block;font-size:.95rem;color:var(--navy);">$500+</strong>
+                  <span style="color:var(--gray-600);font-size:.875rem;">Sponsors a full community training event</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Crisis Resource -->
+          <div class="sidebar-card" style="background:var(--red-crisis);color:#fff;border:none;">
+            <h3 style="color:#fff;border-bottom-color:rgba(255,255,255,.3);">Need Help Now?</h3>
+            <p style="font-size:.9rem;margin-bottom:1rem;color:rgba(255,255,255,.9);">If you or someone you love is in crisis, please reach out immediately.</p>
+            <a href="tel:988" class="btn btn-secondary" style="width:100%;justify-content:center;margin-bottom:.75rem;">📞 Call or Text 988</a>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.75);text-align:center;">988 Suicide &amp; Crisis Lifeline — Available 24/7</p>
+          </div>
+
+          <!-- Scripture -->
+          <div class="sidebar-card" style="background:var(--navy);border:none;text-align:center;">
+            <p style="font-style:italic;color:rgba(255,255,255,.9);font-size:.95rem;line-height:1.6;margin-bottom:.75rem;">
+              "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+            </p>
+            <p style="color:var(--gold);font-weight:700;font-size:.9rem;">— 2 Corinthians 9:7</p>
+          </div>
+
+          <!-- Store Link -->
+          <div class="sidebar-card" style="background:var(--green);border:none;text-align:center;color:#fff;">
+            <div style="font-size:2rem;margin-bottom:.5rem;">🛒</div>
+            <h3 style="color:#fff;border-bottom-color:rgba(255,255,255,.3);">Ministry Store</h3>
+            <p style="font-size:.9rem;color:rgba(255,255,255,.9);margin-bottom:1rem;">Shop for hope-themed merchandise. Proceeds support our programs.</p>
+            <a href="store.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Visit the Store →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" aria-labelledby="donatesFaqTitle">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title" id="donatesFaqTitle">Donation Questions</h2>
+      </div>
+      <div class="cards-grid cards-grid-2">
+        <div class="card">
+          <h3 class="card-title">Is my donation tax-deductible?</h3>
+          <p class="card-text">Hope In The Valley Ministry is organized as a non-profit charitable organization. Donations are generally tax-deductible to the extent permitted by law. Please consult your tax advisor.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">How is my gift used?</h3>
+          <p class="card-text">Your donation funds our three core programs: suicide prevention education, grief support groups, and community outreach. You may designate your gift to a specific program area.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Can I set up a recurring gift?</h3>
+          <p class="card-text">Yes! Monthly and annual recurring donations provide reliable support that allows us to plan and expand our programs. Select "Monthly" or "Annual" above before donating.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Is my information secure?</h3>
+          <p class="card-text">Absolutely. All transactions are processed through industry-standard encrypted payment processors. We never store your financial information on our servers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">✝</div>
+            <div class="nav-logo-text">
+              <div class="nav-logo-name">Hope In The Valley</div>
+              <div class="nav-logo-tagline">Ministry</div>
+            </div>
+          </a>
+          <p>A non-denominational Christian outreach dedicated to Christ-centered suicide prevention, grief support, and community awareness.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Ministry</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Our Programs</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="store.html">Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Crisis Resources</a></li>
+            <li><a href="contact.html#grief">Grief Support</a></li>
+            <li><a href="contact.html#volunteer">Volunteer</a></li>
+            <li><a href="contact.html#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Crisis Help</h4>
+          <ul class="footer-links">
+            <li><a href="tel:988">📞 988 Lifeline</a></li>
+            <li><a href="sms:741741">💬 Crisis Text: 741741</a></li>
+            <li><a href="tel:911">🚨 Emergency: 911</a></li>
+            <li><a href="https://988lifeline.org" target="_blank" rel="noopener">988lifeline.org ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-crisis">
+      <div class="container">
+        If you are in crisis, please call or text <a href="tel:988">988</a> immediately. Help is available 24/7.
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2025 Hope In The Valley Ministry · hvm-us.org · Cleveland, Tennessee</span>
+        <span>Built with ❤ to bring hope to the valley</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-modal" id="cartModal" role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+        <button class="btn btn-green" id="cartCheckout" style="width:100%">Proceed to Checkout</button>
+        <p class="cart-notice">Proceeds support Hope In The Valley Ministry programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
