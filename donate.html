@@ -5,10 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donate | Hope In The Valley Ministry</title>
   <meta name="description" content="Support Hope In The Valley Ministry with a one-time or recurring donation. Your gift funds suicide prevention education, grief support, and community outreach." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Hope In The Valley Ministry" />
+  <link rel="canonical" href="https://hvm-us.org/donate.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hope In The Valley Ministry" />
+  <meta property="og:title" content="Donate | Hope In The Valley Ministry" />
+  <meta property="og:description" content="Support Hope In The Valley Ministry with a one-time or recurring donation to fund life-saving programs." />
+  <meta property="og:url" content="https://hvm-us.org/donate.html" />
+  <meta property="og:image" content="https://hvm-us.org/images/HVM-logo2.png" />
+  <meta property="og:image:alt" content="Hope In The Valley Ministry logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Donate | Hope In The Valley Ministry" />
+  <meta name="twitter:description" content="Support Hope In The Valley Ministry with a one-time or recurring donation to fund life-saving programs." />
+  <meta name="twitter:image" content="https://hvm-us.org/images/HVM-logo2.png" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="images/HVM-logo.png" type="image/png" />
+  <style>
+    .donate-construction-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: rgba(10, 27, 45, 0.84);
+      backdrop-filter: blur(3px);
+    }
+
+    .donate-construction-card {
+      width: min(640px, 100%);
+      background: #ffffff;
+      border-radius: 18px;
+      border: 3px solid #d8b25a;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .donate-construction-card h2 {
+      margin: 0 0 0.75rem;
+      color: var(--navy);
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .donate-construction-card p {
+      margin: 0;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .donate-construction-actions {
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .donate-construction-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.2rem;
+      border-radius: 10px;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      transition: filter 0.2s ease;
+    }
+
+    .donate-construction-home:hover,
+    .donate-construction-home:focus-visible {
+      filter: brightness(0.92);
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DonateAction",
+      "name": "Donate to Hope In The Valley Ministry",
+      "recipient": {
+        "@type": "Organization",
+        "name": "Hope In The Valley Ministry",
+        "url": "https://hvm-us.org/"
+      },
+      "target": "https://hvm-us.org/donate.html"
+    }
+  </script>
 </head>
 <body>
+
+  <div class="donate-construction-overlay" role="dialog" aria-modal="true" aria-labelledby="donateConstructionTitle" aria-describedby="donateConstructionDesc">
+    <div class="donate-construction-card">
+      <h2 id="donateConstructionTitle">Donation Portal Under Construction</h2>
+      <p id="donateConstructionDesc">Our online donation portal is currently being updated. Please check back soon for an update. Thank you for your patience and support.</p>
+      <div class="donate-construction-actions">
+        <a href="index.html" class="donate-construction-home" aria-label="Return to home page">Return to Home</a>
+      </div>
+    </div>
+  </div>
 
   <div class="crisis-banner" role="alert">
     If you or someone you know is in crisis, call or text <a href="tel:988"><strong>988</strong></a> — Suicide &amp; Crisis Lifeline, available 24/7.

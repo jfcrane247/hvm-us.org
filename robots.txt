@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hvm-us.org/sitemap.xml
