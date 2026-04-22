@@ -83,11 +83,6 @@
           <li><a href="contact.html">Resources</a></li>
           <li><a href="donate.html" class="donate-link">❤ Donate</a></li>
         </ul>
-
-        <button class="nav-cart" id="cartBtn" aria-label="Open shopping cart">
-          🛒 Cart <span class="cart-count" style="display:none">0</span>
-        </button>
-
         <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -100,10 +95,10 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <img src="images/HVM-logo2.png"
-               alt="Hope In The Valley Ministry"
+          <img src="images/HVM Banner.png"
+               alt="Hope In The Valley Ministry banner"
                class="hero-banner-logo"
-               width="320" height="176">
+               width="1000" height="500">
           <h1 class="hero-title" id="heroTitle">
             Bringing <em>Hope</em>,<br>Healing &amp; Life-Saving<br>Support
           </h1>
@@ -118,7 +113,7 @@
 
         <div class="hero-card" aria-label="Ministry highlights">
           <div class="hero-card-title">
-            <img src="images/HVM-logo.png" alt="" aria-hidden="true" width="28" height="28" style="display:inline-block;vertical-align:middle;margin-right:.5rem;border-radius:50%;">
+            <img src="images/HVM-logo.png" alt="" aria-hidden="true" width="28" height="28" class="hero-card-mark">
             Our Ministry Focus
           </div>
           <ul class="hero-card-list" role="list">
@@ -175,7 +170,7 @@
           <strong>Are you or someone you love in crisis?</strong> Help is available right now.
         </p>
         <a href="tel:988" class="btn btn-danger">📞 Call or Text 988</a>
-        <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)">See All Resources →</a>
+        <a href="contact.html" class="btn btn-light-outline">See All Resources →</a>
       </div>
     </div>
   </div>
@@ -184,30 +179,30 @@
   <!-- Mission & Vision -->
   <section class="section" aria-labelledby="missionTitle">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
-        <div>
+      <div class="feature-split">
+        <div class="feature-copy">
           <span class="section-tag">Our Mission</span>
           <h2 class="section-title" id="missionTitle">Why We Exist</h2>
-          <p style="color:var(--gray-600);margin-bottom:1.25rem;">
+          <p class="body-copy">
             Suicide is one of the most pressing public health and spiritual crises in the United States, affecting individuals, families, churches, and entire communities across every age group, socioeconomic background, and faith tradition.
           </p>
-          <p style="color:var(--gray-600);margin-bottom:1.5rem;">
+          <p class="body-copy">
             Hope In The Valley Ministry exists to address this crisis through Christ-centered prevention education, compassionate grief support, and community awareness initiatives — equipping churches, schools, families, and organizations with spiritual and practical tools.
           </p>
           <a href="about.html" class="btn btn-outline">Learn Our Story →</a>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
-          <div style="background:var(--navy);color:#fff;border-radius:var(--radius-lg);padding:1.75rem;">
-            <div style="font-size:1.4rem;margin-bottom:.5rem;">🎯</div>
-            <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--gold);margin-bottom:.5rem;">Mission Statement</h3>
-            <p style="font-size:.95rem;color:rgba(255,255,255,.85);">
+        <div class="feature-stack">
+          <div class="highlight-panel highlight-panel-navy">
+            <div class="highlight-panel-icon">🎯</div>
+            <h3>Mission Statement</h3>
+            <p>
               To bring hope, healing, and life-saving support through Christ-centered suicide prevention, compassionate grief care, and community awareness initiatives.
             </p>
           </div>
-          <div style="background:var(--green);color:#fff;border-radius:var(--radius-lg);padding:1.75rem;">
-            <div style="font-size:1.4rem;margin-bottom:.5rem;">👁</div>
-            <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:#fff;margin-bottom:.5rem;">Vision</h3>
-            <p style="font-size:.95rem;color:rgba(255,255,255,.9);">
+          <div class="highlight-panel highlight-panel-green">
+            <div class="highlight-panel-icon">👁</div>
+            <h3>Vision</h3>
+            <p>
               A community where every person feels valued, connected, and supported — and where churches serve as safe havens for those struggling or grieving.
             </p>
           </div>
@@ -242,7 +237,7 @@
       <div class="text-center mb-4">
         <span class="section-tag">Programs</span>
         <h2 class="section-title" id="programsTitle">How We Serve</h2>
-        <p class="section-sub" style="margin:0 auto;">Three interconnected programs working together to save lives and support families.</p>
+        <p class="section-sub section-sub-centered">Three interconnected programs working together to save lives and support families.</p>
       </div>
       <div class="cards-grid cards-grid-3">
         <article class="card">
@@ -281,7 +276,7 @@
       <div class="text-center mb-4">
         <span class="section-tag">Biblical Foundation</span>
         <h2 class="section-title" id="bibleTitle">Grounded in Scripture</h2>
-        <p class="section-sub" style="margin:0 auto;">Every program and every conversation is rooted in the truth that every person is created in God's image and has inherent worth.</p>
+        <p class="section-sub section-sub-centered">Every program and every conversation is rooted in the truth that every person is created in God's image and has inherent worth.</p>
       </div>
       <div class="bible-grid">
         <div class="bible-card">
@@ -309,15 +304,17 @@
   </section>
 
   <!-- Get Involved CTA -->
-  <section class="section section-alt" style="text-align:center;" aria-labelledby="ctaTitle">
+  <section class="section section-alt" aria-labelledby="ctaTitle">
     <div class="container">
-      <span class="section-tag">Get Involved</span>
-      <h2 class="section-title" id="ctaTitle" style="margin:0 auto 1rem;">Join Us in Saving Lives</h2>
-      <p class="section-sub" style="margin:0 auto 2rem;">Whether you donate, volunteer, or simply share our message, you can be part of bringing hope to those in the valley.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
-        <a href="donate.html" class="btn btn-primary">❤ Make a Donation</a>
-        <a href="programs.html" class="btn btn-outline">Explore Programs</a>
-        <a href="contact.html" class="btn btn-green">Get Support Now</a>
+      <div class="cta-panel">
+        <span class="section-tag">Get Involved</span>
+        <h2 class="section-title" id="ctaTitle">Join Us in Saving Lives</h2>
+        <p class="section-sub section-sub-centered">Whether you donate, volunteer, or simply share our message, you can be part of bringing hope to those in the valley.</p>
+        <div class="center-actions mt-4">
+          <a href="donate.html" class="btn btn-primary">❤ Make a Donation</a>
+          <a href="programs.html" class="btn btn-outline">Explore Programs</a>
+          <a href="contact.html" class="btn btn-green">Get Support Now</a>
+        </div>
       </div>
     </div>
   </section>
@@ -377,26 +374,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Cart Modal (unused on home but present for nav) -->
-  <div class="cart-modal" id="cartModal" role="dialog" aria-modal="true" aria-label="Shopping cart">
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-panel">
-      <div class="cart-header">
-        <h2>Your Cart</h2>
-        <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
-      </div>
-      <div class="cart-items" id="cartItems"></div>
-      <div class="cart-footer">
-        <div class="cart-total">
-          <span>Total</span>
-          <span id="cartTotal">$0.00</span>
-        </div>
-        <button class="btn btn-green" id="cartCheckout" style="width:100%">Proceed to Checkout</button>
-        <p class="cart-notice">Proceeds support Hope In The Valley Ministry programs.</p>
-      </div>
-    </div>
-  </div>
 
   <script src="js/main.js"></script>
 </body>
